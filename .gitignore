@@ -1,5 +1,5 @@
 # Ignore confi file
-config/db.ini.php
+/config/db.ini.php
 
 # Ignore composer dependencies
 /vendor/
