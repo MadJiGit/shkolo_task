@@ -1,0 +1,25 @@
+# Enable mod_rewrite
+RewriteEngine On
+RewriteBase /shkolo_task/
+
+# Redirect clean URLs to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?action=$1 [QSA,L]
+
+# Allow access to index.php (IMPORTANT)
+<Files "index.php">
+    Require all granted
+</Files>
+
+# Block direct access to PHP files inside /src/
+RewriteRule ^src/ - [F,L]
+
+# Block direct access to any .php files (except index.php)
+RewriteCond %{THE_REQUEST} \.php [NC]
+RewriteCond %{REQUEST_URI} !index.php [NC]
+RewriteRule .* - [F,L]
+
+# Allow access to public assets (CSS, JS, Images)
+RewriteCond %{REQUEST_URI} ^/shkolo_task/public/
+RewriteRule .* - [L]

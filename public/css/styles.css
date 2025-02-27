@@ -1,0 +1,177 @@
+body {
+    /*font-family: Arial, sans-serif;*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.header {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.empty-button-icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+
+.cell:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cell .plus-icon {
+    font-size: 2em;
+    color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.button-container .extra-button {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.button-container:hover .extra-button {
+    display: inline;
+}
+
+.button-container .extra-button:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.config-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.config-container label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.config-container input,
+.config-container select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.config-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.config-container button:hover {
+    background-color: #0056b3;
+}
+
+.config-container .back-button {
+    background-color: #007bff;
+    margin-top: 10px;
+}
+
+.config-container .back-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.button-container:hover .delete-button {
+    display: inline;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    background-color: #ffebee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+}
