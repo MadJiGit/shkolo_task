@@ -1,0 +1,20 @@
+# Ignore composer dependencies
+/vendor/
+
+# Ignore environment variables
+.env
+
+# Ignore IDE specific files
+.idea/
+*.iml
+
+# Ignore node_modules if using Node.js
+/node_modules/
+
+# Ignore log files and temporary files
+*.log
+*.tmp
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
